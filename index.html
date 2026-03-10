@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IAL A2 Economics | Unit 4 Ch.5 — Role of the State in the Macroeconomy</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#faf8f4;--bg2:#f3f0ea;--surface:#ffffff;--accent:#1b5cb5;--accent2:#7b1bb5;--accent3:#b5451b;--green:#1a7a3f;--red:#b51b1b;--text:#1a1810;--text2:#3d3a30;--muted:#8a8070;--border:#ddd9d0;--border2:#c8c3b8;}
+  *{margin:0;padding:0;box-sizing:border-box;}body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.75;}
+  #gate{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4rem;}
+  .gate-rule{width:3rem;height:1.5px;background:var(--accent);}.gate-label{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--accent);letter-spacing:0.2em;text-transform:uppercase;}
+  .gate-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5.5vw,3.5rem);font-weight:700;text-align:center;line-height:1.05;}.gate-title em{color:var(--accent);font-style:italic;}
+  .gate-sub{color:var(--muted);font-size:0.88rem;text-align:center;max-width:320px;}
+  .gate-input-wrap{display:flex;gap:0.65rem;align-items:center;background:var(--surface);border:1.5px solid var(--border2);padding:0.7rem 1.1rem;border-radius:3px;width:300px;margin-top:0.5rem;}.gate-input-wrap:focus-within{border-color:var(--accent);}
+  #pwInput{background:none;border:none;outline:none;color:var(--text);font-family:'DM Mono',monospace;font-size:0.95rem;flex:1;letter-spacing:0.12em;}#pwInput::placeholder{color:var(--muted);font-size:0.82rem;letter-spacing:0.04em;}
+  #pwBtn{background:var(--accent);color:#fff;border:none;cursor:pointer;font-family:'DM Mono',monospace;font-size:0.72rem;font-weight:500;padding:0.38rem 0.85rem;border-radius:2px;letter-spacing:0.07em;text-transform:uppercase;}#pwBtn:hover{opacity:0.85;}
+  #pwError{color:var(--red);font-size:0.78rem;font-family:'DM Mono',monospace;letter-spacing:0.05em;display:none;}#content{display:none;}
+  nav{position:sticky;top:0;z-index:100;background:rgba(250,248,244,0.96);backdrop-filter:blur(12px);border-bottom:1.5px solid var(--border2);padding:0 2.5rem;display:flex;align-items:center;gap:1.5rem;height:54px;overflow-x:auto;}
+  nav .logo{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--accent);letter-spacing:0.18em;text-transform:uppercase;white-space:nowrap;font-weight:500;}
+  nav .unit-tag{font-family:'DM Mono',monospace;font-size:0.62rem;background:var(--accent);color:#fff;padding:0.18rem 0.6rem;border-radius:2px;letter-spacing:0.08em;white-space:nowrap;}
+  nav a{font-size:0.72rem;color:var(--muted);text-decoration:none;letter-spacing:0.04em;transition:color 0.2s;white-space:nowrap;font-weight:500;}nav a:hover{color:var(--accent);}
+  .hero{padding:4.5rem 2.5rem 3.5rem;max-width:960px;margin:0 auto;border-bottom:1px solid var(--border);}
+  .hero-eyebrow{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;}.eyebrow-line{width:2.5rem;height:1.5px;background:var(--accent);}.eyebrow-text{font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--accent);letter-spacing:0.18em;text-transform:uppercase;}
+  h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:700;line-height:1.0;letter-spacing:-0.01em;margin-bottom:1.25rem;}h1 em{color:var(--accent);font-style:italic;}
+  .hero-sub{color:var(--muted);font-size:0.95rem;max-width:530px;line-height:1.7;}.hero-meta{display:flex;gap:1.5rem;margin-top:2rem;flex-wrap:wrap;}.meta-pill{font-family:'DM Mono',monospace;font-size:0.63rem;color:var(--text2);border:1px solid var(--border2);padding:0.3rem 0.75rem;border-radius:20px;letter-spacing:0.06em;}
+  main{max-width:960px;margin:0 auto;padding:0 2.5rem 6rem;}
+  .section-block{margin-bottom:3rem;border:1.5px solid var(--border);border-radius:4px;overflow:hidden;background:var(--surface);}
+  .section-header{background:var(--bg2);padding:1.1rem 1.75rem;display:flex;align-items:center;gap:1rem;border-bottom:1.5px solid var(--border);cursor:pointer;user-select:none;transition:background 0.15s;}.section-header:hover{background:var(--bg);}
+  .section-num{font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--accent);background:rgba(27,92,181,0.1);padding:0.22rem 0.55rem;border-radius:3px;white-space:nowrap;font-weight:500;letter-spacing:0.06em;}
+  .section-title{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;flex:1;color:var(--text);}.toggle-icon{font-size:1rem;color:var(--muted);transition:transform 0.3s;}.section-body{padding:1.75rem 2rem;}
+  h2{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--accent);margin:1.9rem 0 0.8rem;padding-bottom:0.35rem;border-bottom:1.5px solid var(--border);display:flex;align-items:center;gap:0.75rem;font-weight:600;}h2:first-child{margin-top:0;}h2::before{content:'';display:block;width:3px;height:1rem;background:var(--accent);flex-shrink:0;border-radius:2px;}
+  h3{font-size:0.83rem;color:var(--accent3);font-weight:600;margin:1.1rem 0 0.45rem;text-transform:uppercase;letter-spacing:0.09em;}
+  p{color:var(--text2);font-size:0.9rem;margin-bottom:0.65rem;line-height:1.75;}ul,ol{padding-left:1.3rem;margin:0.5rem 0 0.65rem;}li{color:var(--text2);font-size:0.88rem;margin-bottom:0.32rem;line-height:1.7;}
+  .def-box{background:rgba(27,92,181,0.05);border-left:3px solid var(--accent);padding:0.75rem 1.1rem;margin:0.65rem 0;border-radius:0 3px 3px 0;font-size:0.86rem;color:var(--text2);}.def-box strong{color:var(--accent);}
+  .exam-tip{background:rgba(181,69,27,0.05);border-left:3px solid var(--accent3);padding:0.75rem 1.1rem;margin:0.65rem 0;border-radius:0 3px 3px 0;font-size:0.86rem;color:var(--text2);}
+  .exam-tip::before{content:'★ EXAM TIP — ';font-weight:700;color:var(--accent3);font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.06em;}
+  .table-wrap{overflow-x:auto;margin:0.9rem 0;}table{width:100%;border-collapse:collapse;font-size:0.82rem;}th{background:var(--bg2);color:var(--accent);font-family:'DM Mono',monospace;font-size:0.67rem;letter-spacing:0.09em;text-transform:uppercase;padding:0.65rem 0.9rem;text-align:left;border-bottom:2px solid var(--border2);font-weight:500;}td{padding:0.6rem 0.9rem;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:top;font-size:0.84rem;}tr:hover td{background:var(--bg2);}td:first-child{color:var(--text);font-weight:500;}
+  .formula{font-family:'DM Mono',monospace;background:var(--bg2);border:1.5px solid var(--border2);padding:0.85rem 1.25rem;margin:0.65rem 0;font-size:0.84rem;border-radius:3px;color:var(--accent2);}.formula span{color:var(--muted);font-size:0.72rem;}
+  .pro-con{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem;margin:0.9rem 0;}.pro{background:rgba(26,122,63,0.05);border:1.5px solid rgba(26,122,63,0.2);padding:0.9rem 1rem;border-radius:3px;}.pro strong{color:var(--green);display:block;margin-bottom:0.45rem;font-size:0.69rem;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Mono',monospace;}.con{background:rgba(181,27,27,0.05);border:1.5px solid rgba(181,27,27,0.18);padding:0.9rem 1rem;border-radius:3px;}.con strong{color:var(--red);display:block;margin-bottom:0.45rem;font-size:0.69rem;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Mono',monospace;}.pro li,.con li{margin-left:1.1rem;margin-bottom:0.28rem;color:var(--text2);font-size:0.84rem;}
+  .question-card{background:var(--surface);border:1.5px solid var(--border);border-radius:3px;margin-bottom:1.2rem;overflow:hidden;}.q-header{padding:0.9rem 1.35rem;background:var(--bg2);display:flex;align-items:center;gap:0.9rem;border-bottom:1.5px solid var(--border);cursor:pointer;flex-wrap:wrap;transition:background 0.15s;}.q-header:hover{background:rgba(27,92,181,0.04);}.q-marks{font-family:'DM Mono',monospace;font-size:0.65rem;background:rgba(27,92,181,0.12);color:var(--accent);padding:0.18rem 0.52rem;border-radius:3px;white-space:nowrap;font-weight:500;}.q-text{font-size:0.88rem;color:var(--text);flex:1;font-weight:500;}.q-body{padding:1.35rem;display:none;border-top:1.5px solid var(--border);}.q-body.open{display:block;}
+  .answer-section h4{font-size:0.69rem;color:var(--accent2);font-family:'DM Mono',monospace;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.65rem;}.mark-scheme{background:rgba(123,27,181,0.04);border-left:3px solid var(--accent2);padding:0.75rem 1.1rem;margin-top:0.9rem;border-radius:0 3px 3px 0;font-size:0.83rem;color:var(--text2);}.mark-scheme strong{color:var(--accent2);font-family:'DM Mono',monospace;font-size:0.7rem;}
+  .essay-plan{background:rgba(123,27,181,0.03);border:1.5px solid rgba(123,27,181,0.15);border-radius:4px;padding:1.35rem 1.5rem;margin-bottom:1.1rem;}.essay-plan .ep-title{font-family:'DM Mono',monospace;font-size:0.67rem;color:var(--accent2);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem;}.essay-plan .ep-q{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--text);margin-bottom:0.9rem;line-height:1.4;}.ep-row{display:flex;gap:0.85rem;margin-bottom:0.55rem;font-size:0.83rem;}.ep-label{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--accent2);text-transform:uppercase;letter-spacing:0.07em;min-width:90px;padding-top:0.1rem;flex-shrink:0;}.ep-content{color:var(--text2);line-height:1.65;}.econ-badge{display:inline-block;background:rgba(27,92,181,0.08);color:var(--accent);font-family:'DM Mono',monospace;font-size:0.62rem;padding:0.15rem 0.48rem;border-radius:3px;margin:0.1rem 0.2rem 0.1rem 0;}
+  @media(max-width:640px){.hero{padding:3rem 1.25rem 2.5rem;}main{padding:0 1.25rem 4rem;}.section-body{padding:1.25rem;}.pro-con{grid-template-columns:1fr;}nav{padding:0 1.25rem;}}
+</style>
+</head>
+<body>
+<div id="gate">
+  <div class="gate-rule"></div>
+  <div class="gate-label">EcoNotes · Unit 4 · Chapter 5</div>
+  <div class="gate-title">Role of the<br><em>State</em></div>
+  <div class="gate-sub">Enter your access password to unlock this chapter.</div>
+  <div class="gate-input-wrap"><input id="pwInput" type="password" placeholder="Enter password..." autocomplete="off"><button id="pwBtn" onclick="checkPw()">Unlock</button></div>
+  <div id="pwError">✕ Incorrect password — check your order confirmation.</div>
+</div>
+
+<div id="content">
+<nav>
+  <span class="logo">EcoNotes</span>
+  <span class="unit-tag">Unit 4 · Ch.5</span>
+  <a href="#public-expenditure">Public Expenditure</a>
+  <a href="#taxation">Taxation</a>
+  <a href="#fiscal-deficit">Fiscal Deficit</a>
+  <a href="#fiscal-policy">Fiscal Policy</a>
+  <a href="#2008-crisis">2008 Crisis</a>
+  <a href="#tncs">TNC Regulation</a>
+  <a href="#past-papers">Past Papers</a>
+  <a href="#essay-plans">Essay Plans</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">IAL A2 Economics · Unit 4 · 4.3.5</div></div>
+  <h1>Role of the<br><em>State in the<br>Macroeconomy</em></h1>
+  <p class="hero-sub">Public expenditure types, taxation, fiscal deficits vs national debt, the 2008 financial crisis, and TNC tax regulation — with all the economist names and mechanisms examiners want.</p>
+  <div class="hero-meta">
+    <span class="meta-pill">4.3.5 Spec Coverage</span>
+    <span class="meta-pill">Laffer Curve</span>
+    <span class="meta-pill">Keynes · Friedman · Baumol</span>
+    <span class="meta-pill">10 × 20-Mark Essay Plans</span>
+  </div>
+</div>
+
+<main>
+
+<!-- SECTION 1: PUBLIC EXPENDITURE -->
+<div class="section-block" id="public-expenditure">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">4.3.5a</span>
+    <span class="section-title">Public Expenditure — Types &amp; Determinants</span>
+    <span class="toggle-icon">▼</span>
+  </div>
+  <div class="section-body">
+    <h2>Three Types of Government Spending</h2>
+    <div class="def-box"><strong>Capital expenditure:</strong> Spending on long-lived assets that increase the productive capacity of the economy — roads, hospitals, schools, broadband infrastructure. Creates assets that provide services over many years. Also called public investment.</div>
+    <div class="def-box"><strong>Current expenditure:</strong> Spending on the day-to-day running of public services — wages of public sector workers (teachers, nurses, soldiers), consumables, maintenance. Does not create lasting assets. The largest component of government spending in most economies.</div>
+    <div class="def-box"><strong>Transfer payments:</strong> Government payments to individuals that are not in exchange for goods or services — state pension, unemployment benefit (Jobseeker's Allowance), Universal Credit, tax credits, disability benefits. Redistributes income but is not counted in GDP (no value added).</div>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Type</th><th>Examples (UK)</th><th>% of Total Spending (approx.)</th><th>Effect on Productive Capacity</th></tr></thead>
+        <tbody>
+          <tr><td>Capital</td><td>HS2, NHS buildings, roads, broadband</td><td>~10%</td><td>✓ Increases long-run supply-side potential</td></tr>
+          <tr><td>Current</td><td>NHS staff wages, defence, education running costs</td><td>~45%</td><td>✗ Maintains but doesn't expand productive capacity</td></tr>
+          <tr><td>Transfer</td><td>State pension (~40% of benefits bill), UC, housing benefit</td><td>~45%</td><td>✗ Redistributes income; not in GDP calculation</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Determinants of Government Spending</h2>
+    <h3>1. Demographic factors</h3>
+    <p>Ageing population increases age-related spending (state pension, NHS, social care). UK: state pension is the single largest benefit — over £100bn annually. As the dependency ratio rises, current expenditure and transfer payments grow as a share of GDP even without policy changes.</p>
+    <h3>2. Economic cycle</h3>
+    <p>Government spending automatically rises during recessions (automatic stabilisers: rising unemployment benefit) and falls during booms. Cyclical government spending helps stabilise aggregate demand — Keynesian automatic stabilisers reduce multiplier effects of output gaps.</p>
+    <h3>3. Political choices</h3>
+    <p>Governments choose the composition of spending based on political priorities — public goods provision, redistribution levels, infrastructure investment. These choices reflect ideological positions (Keynesian demand management vs supply-side fiscal conservatism).</p>
+    <h3>4. National debt service costs</h3>
+    <p>High national debt increases interest payments — crowding out other government spending. UK interest payments exceeded £100bn in 2022–23 following quantitative easing normalisation. As debt rises, a larger share of tax revenue goes to debt service, constraining other expenditure.</p>
+
+    <h2>Wagner's Law</h2>
+    <div class="def-box"><strong>Wagner's Law (1883):</strong> As economies develop and real incomes rise, government spending tends to grow as a share of GDP. Three reasons: (1) rising demand for public goods (law and order, education) with income; (2) economies of scale in public provision; (3) natural monopoly features of infrastructure require public provision. Adolph Wagner predicted this secular trend of "expanding state activity."</div>
+    <div class="exam-tip">Wagner's Law is excellent context for any essay on government spending trends. It explains why government spending as a % of GDP tends to rise over time in all developed economies — not just due to policy choices but due to structural demand-side and supply-side forces. Evaluate: causality may run both ways; some argue rising spending reflects political capture rather than genuine demand.</div>
+  </div>
+</div>
+
+<!-- SECTION 2: TAXATION -->
+<div class="section-block" id="taxation">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">4.3.5b</span>
+    <span class="section-title">Taxation — Types, Objectives &amp; the Laffer Curve</span>
+    <span class="toggle-icon">▼</span>
+  </div>
+  <div class="section-body">
+    <h2>Direct vs Indirect Taxation</h2>
+    <div class="def-box"><strong>Direct tax:</strong> Levied directly on income, wealth, or profits of individuals and firms. The taxpayer pays the tax directly to the government. Examples: income tax, corporation tax, capital gains tax, inheritance tax, National Insurance contributions.</div>
+    <div class="def-box"><strong>Indirect tax:</strong> Levied on expenditure — on the purchase of goods and services. Can be passed on to consumers (incidence shifting). Examples: VAT (20% in UK), fuel duty, alcohol duty, tobacco duty, air passenger duty.</div>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Concept</th><th>Direct Tax</th><th>Indirect Tax</th></tr></thead>
+        <tbody>
+          <tr><td>Who pays?</td><td>Income earner / company (cannot pass on)</td><td>Firm (can pass on to consumer via higher prices)</td></tr>
+          <tr><td>Progressivity</td><td>Can be highly progressive (income tax)</td><td>Often regressive (VAT takes higher % from poor)</td></tr>
+          <tr><td>Revenue stability</td><td>More stable (predictable income flows)</td><td>Less stable (varies with consumer spending patterns)</td></tr>
+          <tr><td>Avoidance scope</td><td>Higher (offshore accounts, complex structures)</td><td>Lower (harder to avoid on consumption)</td></tr>
+          <tr><td>Administrative cost</td><td>Higher (requires assessment of income/profits)</td><td>Lower (collected at point of sale)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Progressive, Proportional, and Regressive Taxes</h2>
+    <div class="def-box"><strong>Progressive tax:</strong> Average tax rate rises with income — higher earners pay a larger percentage of their income in tax. UK income tax: 20% basic rate, 40% higher rate, 45% additional rate. Capital gains tax also progressive.</div>
+    <div class="def-box"><strong>Proportional (flat) tax:</strong> Average tax rate is constant regardless of income — all pay the same percentage. National Insurance contributions approximate this in some bands. Proposed by supply-side economists as efficiency-enhancing.</div>
+    <div class="def-box"><strong>Regressive tax:</strong> Average tax rate falls as income rises — lower earners pay a higher percentage of income in tax. VAT is regressive because low-income households spend a higher proportion of income on consumption. Similarly, fuel duty, council tax (on property rather than income).</div>
+
+    <h2>Canons of Taxation (Adam Smith)</h2>
+    <p>Adam Smith (1776) identified four principles of good taxation: (1) <strong>Equity</strong> — taxes should be fair and proportional to ability to pay; (2) <strong>Certainty</strong> — the amount, timing, and manner of payment should be clear; (3) <strong>Convenience</strong> — taxes should be easy to pay; (4) <strong>Economy</strong> — cost of collection should be low relative to revenue raised.</p>
+
+    <h2>The Laffer Curve</h2>
+    <div class="def-box"><strong>Laffer Curve (Arthur Laffer, 1974):</strong> At a tax rate of 0%, tax revenue = 0. At a tax rate of 100%, tax revenue = 0 (nobody works). Between these extremes, revenue first rises then falls as rates increase. There exists a revenue-maximising tax rate (t*) beyond which higher rates reduce total revenue.</div>
+    <div class="formula">Tax Revenue = Tax Rate × Tax Base <span>— as rate rises beyond t*, the tax base shrinks faster than the rate rises, so revenue falls</span></div>
+
+    <h3>Mechanisms via which high rates reduce the tax base</h3>
+    <ul>
+      <li><strong>Supply-side effects:</strong> High marginal rates reduce incentive to work, invest, or take entrepreneurial risk — reducing taxable income</li>
+      <li><strong>Avoidance and evasion:</strong> Higher rates increase incentive to use offshore accounts, complex corporate structures, or cash-in-hand transactions</li>
+      <li><strong>Capital and talent flight:</strong> High-earners and firms relocate to lower-tax jurisdictions</li>
+    </ul>
+    <h3>Evaluation of the Laffer Curve</h3>
+    <ul>
+      <li>The <strong>position of t*</strong> is unknown and contested — empirical estimates for the UK suggest it may be between 50–70%. At the UK top rate of 45%, most economists believe we are on the upward-sloping part of the curve (raising the top rate would raise revenue).</li>
+      <li>The Laffer Curve was used to justify Reagan's <strong>supply-side tax cuts</strong> (1981) — but evidence suggests these primarily benefited high earners without significantly expanding the tax base</li>
+      <li><strong>Diamond &amp; Saez (2011)</strong> estimate the revenue-maximising top marginal rate is approximately 70% for the USA — well above current rates</li>
+    </ul>
+    <div class="exam-tip">Examiners love the Laffer Curve but want evaluative depth. Key point: "The Laffer Curve is theoretically uncontroversial — very high rates must reduce revenue. The empirical question is where t* lies. Diamond and Saez (2011) estimate ~70% for the USA, suggesting most developed economies are on the upward slope and raising top rates would increase revenue. The curve is often misused to justify all tax cuts regardless of starting rate."</div>
+  </div>
+</div>
+
+<!-- SECTION 3: FISCAL DEFICIT -->
+<div class="section-block" id="fiscal-deficit">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">4.3.5c</span>
+    <span class="section-title">Fiscal Deficit, National Debt: Structural vs Cyclical</span>
+    <span class="toggle-icon">▼</span>
+  </div>
+  <div class="section-body">
+    <h2>The Fiscal Deficit</h2>
+    <div class="def-box"><strong>Fiscal (budget) deficit:</strong> When government spending (G) exceeds tax revenue (T) in a given period. Deficit = G − T &gt; 0. A deficit must be financed by borrowing — the government issues gilts (bonds) to the private sector and foreign investors.</div>
+    <div class="def-box"><strong>National (public) debt:</strong> The accumulated stock of outstanding government borrowing. It rises by the amount of each annual deficit (and falls with a surplus). The national debt is a stock; the deficit is a flow.</div>
+    <div class="formula">National Debt(t) = National Debt(t-1) + Fiscal Deficit(t) <span>— debt accumulates from deficits and falls with surpluses</span></div>
+
+    <h2>Structural vs Cyclical Deficit</h2>
+    <div class="def-box"><strong>Cyclical deficit:</strong> The component of the deficit that arises automatically due to the economic cycle. In a recession, tax revenues fall (lower incomes, profits, spending) and transfer payments rise (more unemployment benefit). This component disappears when the economy returns to trend growth.</div>
+    <div class="def-box"><strong>Structural deficit:</strong> The component of the deficit that would persist even if the economy were operating at its potential (trend) level of output. It reflects a fundamental imbalance between government spending commitments and tax revenues — a permanent mismatch requiring policy action to correct.</div>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Concept</th><th>Cyclical Deficit</th><th>Structural Deficit</th></tr></thead>
+        <tbody>
+          <tr><td>Cause</td><td>Automatic stabilisers responding to output gap</td><td>Fundamental imbalance in spending and tax levels</td></tr>
+          <tr><td>Duration</td><td>Temporary — disappears with recovery</td><td>Permanent — persists even at full employment</td></tr>
+          <tr><td>Policy response</td><td>Allow automatic stabilisers to work; no action needed</td><td>Structural fiscal consolidation needed (spending cuts or tax rises)</td></tr>
+          <tr><td>Keynesian view</td><td>Desirable — helps stabilise demand during recession</td><td>Problematic — sustainable fiscal position requires structural balance</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Debt-to-GDP Ratio</h2>
+    <p>The fiscal sustainability of government debt is assessed by the <strong>debt-to-GDP ratio</strong> rather than the absolute level of debt. A country's capacity to service debt depends on the size of its economy relative to the debt burden. UK debt-to-GDP has risen from ~40% pre-2008 to over 100% by 2023.</p>
+    <div class="formula">Debt sustainability condition: (r − g) × (D/Y) &lt; Primary Surplus/Y <span>— where r = interest rate, g = growth rate, D = debt, Y = GDP</span></div>
+    <p>If r &gt; g (interest rate exceeds growth rate), debt grows as a share of GDP even with no primary deficit — reinforcing the concern about Piketty's r &gt; g analysis applied to government debt dynamics.</p>
+
+    <h2>Crowding Out</h2>
+    <div class="def-box"><strong>Crowding out:</strong> The argument that government borrowing reduces private investment by (1) competing for loanable funds, pushing up real interest rates, and (2) reducing business confidence. If government borrowing fully crowds out an equal amount of private investment, fiscal stimulus has zero net effect on aggregate demand (full crowding out).</div>
+    <p><strong>Evaluation:</strong> Crowding out is most likely when the economy is operating at full capacity (classical range of AS). In a recession with a large output gap and near-zero interest rates, crowding out is minimal — the government borrows funds that would otherwise be idle (Keynesian liquidity trap logic). The degree of crowding out is therefore state-dependent.</p>
+    <div class="exam-tip">The crowding out debate is the central conflict between Keynesian and classical fiscal policy views. Key argument: "Crowding out is most significant when the economy is at full employment — additional borrowing competes for existing savings. During recessions, when the economy has spare capacity and interest rates are low, crowding out is minimal because government borrows from idle savings. The 2009 fiscal stimulus had large multiplier effects precisely because crowding out was limited at the zero lower bound."</div>
+  </div>
+</div>
+
+<!-- SECTION 4: FISCAL POLICY -->
+<div class="section-block" id="fiscal-policy">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">4.3.5d</span>
+    <span class="section-title">Fiscal Policy — Expansionary, Contractionary &amp; Multiplier</span>
+    <span class="toggle-icon">▼</span>
+  </div>
+  <div class="section-body">
+    <h2>Types of Fiscal Policy</h2>
+    <div class="def-box"><strong>Expansionary fiscal policy:</strong> Increasing government spending (G) and/or reducing taxes (T) to boost aggregate demand. Results in a larger fiscal deficit. Used to close a negative output gap (recession). Associated with Keynesian demand management.</div>
+    <div class="def-box"><strong>Contractionary fiscal policy (austerity):</strong> Reducing government spending and/or raising taxes to reduce aggregate demand or improve fiscal sustainability. Reduces the deficit. Can cause recession if implemented during a downturn — risk of self-defeating austerity.</div>
+
+    <h2>The Fiscal Multiplier</h2>
+    <div class="def-box"><strong>Fiscal multiplier:</strong> The ratio of the change in real GDP to the change in government spending (or taxes) that caused it. A multiplier &gt; 1 means government spending increases output by more than the initial spending — via the Keynesian income-expenditure mechanism.</div>
+    <div class="formula">Multiplier (k) = 1 / (1 − MPC) = 1 / MPS <span>— where MPC = marginal propensity to consume, MPS = marginal propensity to save</span></div>
+    <p>If MPC = 0.8, k = 1/(1-0.8) = 5. Each £1 of government spending generates £5 of GDP. In practice, the multiplier is much lower because some income leaks to: taxation (t), imports (m), and saving (s).</p>
+    <div class="formula">Realistic multiplier = 1 / (1 − MPC(1−t) + m) <span>— where t = marginal tax rate, m = marginal propensity to import</span></div>
+
+    <h3>Factors affecting the size of the multiplier</h3>
+    <ul>
+      <li><strong>MPC:</strong> Higher MPC → larger multiplier. The poor have a higher MPC → redistribution to low-income households has a larger multiplier effect than tax cuts for the wealthy.</li>
+      <li><strong>Openness to trade:</strong> High import propensity (open economies) → more leakage → smaller multiplier. UK's multiplier is lower than the USA's due to higher trade openness.</li>
+      <li><strong>Spare capacity:</strong> If the economy has a large output gap, the multiplier is higher (additional spending generates real output). At full employment, spending is purely inflationary — multiplier approaches zero in real terms.</li>
+      <li><strong>Crowding out:</strong> If government borrowing raises interest rates and crowds out private investment, the net multiplier is reduced.</li>
+      <li><strong>Ricardian equivalence (Barro, 1974):</strong> If households expect higher future taxes to finance current deficits, they save more now to pay future taxes — completely offsetting the demand stimulus. Multiplier = 0. Empirically rejected at moderate debt levels but relevant at very high debt.</li>
+    </ul>
+
+    <h2>Automatic Stabilisers vs Discretionary Fiscal Policy</h2>
+    <div class="def-box"><strong>Automatic stabilisers:</strong> Built-in fiscal mechanisms that automatically reduce the amplitude of economic cycles without requiring policy action. In recession: tax revenues fall, transfer payments rise → deficit increases → supports AD. In boom: tax revenues rise, transfers fall → surplus increases → dampens AD.</div>
+    <p>Discretionary fiscal policy is deliberate changes to G or T. Requires: (1) recognition lag (identifying the shock), (2) decision lag (parliamentary process), (3) implementation lag (spending programmes take time to deploy). These lags mean discretionary fiscal policy can destabilise the cycle if poorly timed.</p>
+  </div>
+</div>
+
+<!-- SECTION 5: 2008 CRISIS -->
+<div class="section-block" id="2008-crisis">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">4.3.5e</span>
+    <span class="section-title">The 2008 Financial Crisis — Demand-Side Policy Response</span>
+    <span class="toggle-icon">▼</span>
+  </div>
+  <div class="section-body">
+    <h2>Causes of the 2008 Financial Crisis</h2>
+    <p>The 2008 global financial crisis originated in the US sub-prime mortgage market. Key mechanisms:</p>
+    <ul>
+      <li><strong>Sub-prime lending:</strong> US banks lent to high-risk borrowers at low "teaser" rates, then rising interest rates caused mass default</li>
+      <li><strong>Securitisation and CDOs:</strong> Sub-prime mortgages were packaged into Collateralised Debt Obligations (CDOs) and sold globally — spreading toxic assets through the international financial system</li>
+      <li><strong>Credit rating failure:</strong> Rating agencies (Moody's, S&amp;P) gave AAA ratings to complex CDOs, misrepresenting default risk</li>
+      <li><strong>Leverage:</strong> Investment banks borrowed heavily to purchase these securities — when prices fell, losses exceeded capital buffers, triggering bank failures (Lehman Brothers, September 2008)</li>
+      <li><strong>Contagion:</strong> Interbank lending froze as banks couldn't assess counterparty risk — credit crunch spread globally</li>
+    </ul>
+
+    <h2>Government Policy Responses</h2>
+    <h3>1. Bank Bailouts</h3>
+    <p>Governments recapitalised failing banks to prevent systemic collapse. UK: £500bn banking package (October 2008) — nationalisation of RBS and Lloyds. Rationale: banks are systemically important; their collapse would destroy the payments system and credit supply, causing depression. Criticism: moral hazard — "too big to fail" increases future risk-taking.</p>
+    <h3>2. Expansionary Fiscal Policy</h3>
+    <p>G20 countries implemented coordinated fiscal stimulus in 2009. UK: VAT cut from 17.5% to 15% (temporary boost to consumer spending), increased capital spending. IMF estimated the global fiscal stimulus worth ~2% of world GDP. Outcome: avoided a second Great Depression; GDP fell ~5% but recovered faster than in the 1930s.</p>
+    <h3>3. Ultra-Low Interest Rates</h3>
+    <p>Bank of England cut base rate to 0.5% by March 2009 (then 0.1% in 2020). Reduces borrowing costs, stimulates consumption and investment. Limitation: at the zero lower bound (ZLB), conventional monetary policy is ineffective — the liquidity trap (Keynes).</p>
+    <h3>4. Quantitative Easing (QE)</h3>
+    <div class="def-box"><strong>Quantitative Easing:</strong> The central bank creates new money electronically and uses it to purchase assets (primarily government bonds) from the private sector. This increases bank reserves, reduces long-term interest rates (via portfolio rebalancing), and aims to stimulate lending and asset prices. Bank of England QE: £895bn by 2021.</div>
+    <p>Transmission mechanism: QE → lower long-term bond yields → higher asset prices → wealth effect → higher consumption + investment. Criticism: QE disproportionately benefits asset owners (wealthy), worsening inequality. Limited pass-through to credit availability when banks are rebuilding capital.</p>
+    <h3>5. Post-Crisis Austerity (2010–2019)</h3>
+    <p>UK Coalition government implemented fiscal consolidation: spending cuts and tax rises to reduce the structural deficit. IMF later admitted multipliers were larger than assumed (1.5–2 rather than 0.5), meaning austerity reduced output more than expected. The self-defeating austerity debate: if multipliers are large, austerity reduces GDP → reduces tax revenues → deficit may not fall as projected.</p>
+    <div class="exam-tip">The 2008 crisis policy response is a treasure trove of exam material. Key chain: financial crisis → demand collapse → ZLB → Keynesian fiscal stimulus → multiplier → recovery. Then: austerity debate — if multiplier > 1, austerity is self-defeating. IMF (Blanchard & Leigh, 2013) found multipliers during austerity were 1.5–2, vindicating Keynesian criticism of austerity.</div>
+  </div>
+</div>
+
+<!-- SECTION 6: TNC REGULATION -->
+<div class="section-block" id="tncs">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">4.3.5f</span>
+    <span class="section-title">TNC Regulation — Transfer Pricing &amp; Tax Avoidance</span>
+    <span class="toggle-icon">▼</span>
+  </div>
+  <div class="section-body">
+    <h2>TNC Tax Avoidance Strategies</h2>
+    <p>TNCs operate across multiple tax jurisdictions, creating opportunities to minimise global tax liabilities through legal (avoidance) and illegal (evasion) strategies.</p>
+
+    <h3>Transfer Pricing</h3>
+    <div class="def-box"><strong>Transfer pricing:</strong> TNCs set prices for transactions between their own subsidiaries in different countries. By manipulating these internal prices, they can shift profits from high-tax jurisdictions to low-tax jurisdictions. For example: a subsidiary in a low-tax country charges a high price for a patent or service to a subsidiary in a high-tax country — reducing profits in the high-tax country and raising them in the low-tax country.</div>
+    <p>The OECD estimates that profit shifting by multinationals costs governments $100–240bn annually in lost corporate tax revenue — approximately 4–10% of global corporate tax revenues. Developing countries are proportionally most affected because they rely more heavily on corporate tax.</p>
+    <h3>Debt Shifting (Thin Capitalisation)</h3>
+    <p>TNCs structure their subsidiaries in high-tax countries with high internal debt from subsidiaries in low-tax countries. Interest payments reduce taxable profits in the high-tax country, shifting profits to the low-tax jurisdiction where interest income is taxed at a lower rate.</p>
+    <h3>Treaty Shopping</h3>
+    <p>TNCs route transactions through countries with favourable bilateral tax treaties to minimise withholding taxes on dividends, royalties, and interest. Ireland, Luxembourg, and the Netherlands have been used extensively for this purpose.</p>
+
+    <h2>Regulation Attempts</h2>
+    <h3>OECD Base Erosion and Profit Shifting (BEPS)</h3>
+    <div class="def-box"><strong>BEPS (2015):</strong> OECD/G20 initiative to reduce corporate tax avoidance by TNCs. Key measures: (1) Country-by-country reporting — TNCs must report profits, taxes, and employees in each jurisdiction; (2) Action against aggressive transfer pricing; (3) Hybrid mismatch rules to prevent "stateless income"; (4) Substance requirements — tax benefits only where genuine economic activity occurs.</div>
+    <h3>Global Minimum Corporate Tax (Pillar Two, 2021)</h3>
+    <p>G7/OECD agreement: a global minimum corporate tax rate of <strong>15%</strong> on the profits of large multinationals (revenue &gt;€750m), effective from 2024. Countries below 15% must impose a "top-up tax" to bring the effective rate to 15%. Aims to end the race to the bottom on corporate tax rates. Critics: 15% is too low — many argued for 21%+. Tax havens like Cayman Islands outside the agreement.</p>
+
+    <h2>Evaluation of TNC Regulation</h2>
+    <div class="pro-con">
+      <div class="pro">
+        <strong>✓ Case for regulation</strong>
+        <ul>
+          <li>Revenue loss from avoidance reduces public spending capacity</li>
+          <li>Unfair competitive advantage vs domestic firms (who pay full rate)</li>
+          <li>Erodes public trust in the tax system</li>
+          <li>BEPS has increased transparency and reduced some avoidance</li>
+          <li>Global minimum rate ends race to bottom on corporate rates</li>
+        </ul>
+      </div>
+      <div class="con">
+        <strong>✗ Limits of regulation</strong>
+        <ul>
+          <li>Transfer pricing: very difficult to assess "arm's length" price for intangibles (patents, brands)</li>
+          <li>Regulatory arbitrage: TNCs shift to new unaddressed structures</li>
+          <li>Tax competition remains — countries attract FDI with low rates</li>
+          <li>15% minimum may still incentivise profit-shifting below current rates</li>
+          <li>Developing countries excluded from OECD framework design</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exam-tip">Excellent closing evaluation: "The fundamental challenge of TNC regulation is that it requires international coordination, but each country individually has an incentive to defect and attract capital with lower rates. The global minimum tax reduces but does not eliminate this — 15% is a floor, not a convergence point, and many tax haven jurisdictions remain outside the agreement."</div>
+  </div>
+</div>
+
+<!-- PAST PAPERS -->
+<div class="section-block" id="past-papers">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">Past Papers</span>
+    <span class="section-title">Past Paper Questions &amp; Model Answers</span>
+    <span class="toggle-icon">▼</span>
+  </div>
+  <div class="section-body">
+    <div class="question-card">
+      <div class="q-header" onclick="toggleQ(this)"><span class="q-marks">4 marks</span><span class="q-text">Distinguish between the fiscal deficit and the national debt.</span></div>
+      <div class="q-body"><div class="answer-section"><h4>Model Answer</h4><p>The fiscal deficit is a <strong>flow</strong>: the shortfall in a given period (typically a financial year) where government spending exceeds tax revenues (G − T &gt; 0). It must be financed by borrowing — issuing government bonds.</p><p>The national debt is a <strong>stock</strong>: the total accumulated borrowing outstanding at any point in time. It rises by the amount of each year's deficit and falls with any surplus. The two are related: if the government runs a deficit every year, the national debt grows continuously. A government could run deficits for decades while the debt-to-GDP ratio still falls if GDP growth outpaces the deficit.</p><div class="mark-scheme"><strong>Mark scheme:</strong> 1 mark each: deficit as flow / debt as stock. 1 mark: deficit adds to debt each year. 1 mark: debt can fall as % of GDP even with deficit if growth exceeds deficit.</div></div></div>
+    </div>
+    <div class="question-card">
+      <div class="q-header" onclick="toggleQ(this)"><span class="q-marks">8 marks</span><span class="q-text">Explain the difference between a structural and a cyclical fiscal deficit and why this distinction matters for policy.</span></div>
+      <div class="q-body"><div class="answer-section"><h4>Model Answer</h4><p>A <strong>cyclical deficit</strong> arises automatically during a recession: falling incomes reduce income tax and VAT receipts, rising unemployment increases benefit payments, and corporation tax falls with profits. This deficit disappears when the economy recovers — it is a symptom of the output gap, not a structural problem.</p><p>A <strong>structural deficit</strong> is the deficit that would persist even if the economy were operating at full capacity (the trend level of output). It reflects a permanent mismatch between government spending commitments and tax revenues at normal economic conditions — it will not automatically disappear with recovery.</p><p>The distinction matters profoundly for policy. A cyclical deficit should generally be <em>tolerated or encouraged</em> — it reflects automatic stabilisers reducing the severity of the downturn (Keynesian logic). Attempting to close a cyclical deficit during a recession through spending cuts (austerity) removes demand exactly when it is most needed, potentially deepening the recession.</p><p>A structural deficit, by contrast, requires deliberate fiscal consolidation — either permanent spending cuts or tax increases — because it will persist even after full recovery. The risk of confusing the two: governments that mistake a cyclical deficit for a structural one impose harmful austerity; governments that mistake a structural deficit for a cyclical one delay necessary adjustment, allowing debt to accumulate.</p><div class="mark-scheme"><strong>Band 4:</strong> Clear definitions of both concepts. Explanation of why cyclical deficit is self-correcting. Analysis of why structural deficit requires active policy. Evaluation: difficulty of measuring the output gap in real time makes the distinction hard to implement (OBR estimates subject to wide uncertainty bands).</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ESSAY PLANS -->
+<div class="section-block" id="essay-plans">
+  <div class="section-header" onclick="toggleSection(this)">
+    <span class="section-num">Essay Plans</span>
+    <span class="section-title">10 × 20-Mark Essay Plans</span>
+    <span class="toggle-icon">▼</span>
+  </div>
+  <div class="section-body">
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 1 of 10</div>
+      <div class="ep-q">Evaluate the view that expansionary fiscal policy is the most effective way to reduce unemployment during a recession.</div>
+      <div class="ep-row"><div class="ep-label">Define</div><div class="ep-content">Expansionary fiscal policy: G↑ or T↓ → budget deficit ↑ → AD↑. Unemployment: cyclical (demand-deficient) unemployment. Context: recession with negative output gap.</div></div>
+      <div class="ep-row"><div class="ep-label">Argument for</div><div class="ep-content">Keynesian multiplier: G↑ → income↑ → consumption↑ → further income↑ → AD shifts right → employment rises. Multiplier amplifies initial spending. Effective when economy at ZLB (monetary policy impotent). 2009 stimulus: avoided second Great Depression [IMF]</div></div>
+      <div class="ep-row"><div class="ep-label">Limit 1</div><div class="ep-content">Crowding out: government borrowing raises interest rates → private investment↓ → net AD effect reduced. But: weak at ZLB when private sector has excess savings (Keynes liquidity trap)</div></div>
+      <div class="ep-row"><div class="ep-label">Limit 2</div><div class="ep-content">Implementation lags: recognition → decision → implementation. By time stimulus arrives, economy may have recovered → pro-cyclical policy risk</div></div>
+      <div class="ep-row"><div class="ep-label">Limit 3</div><div class="ep-content">Ricardian equivalence (Barro 1974): households save extra income expecting future tax rises → multiplier ≈ 0. Empirically weak at low debt, stronger at high debt.</div></div>
+      <div class="ep-row"><div class="ep-label">Alternative</div><div class="ep-content">Supply-side policies (training, deregulation) address structural unemployment; monetary policy faster to implement; automatic stabilisers avoid lags.</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">Most effective for cyclical unemployment when: economy at ZLB; multiplier is large (spare capacity, high MPC); structural deficit is small so debt sustainability is not threatened. Less effective when structural unemployment dominates.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">Keynes</span><span class="econ-badge">Barro (1974)</span><span class="econ-badge">IMF (2009)</span><span class="econ-badge">Blanchard & Leigh (2013)</span></div>
+    </div>
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 2 of 10</div>
+      <div class="ep-q">"Raising the top rate of income tax will always reduce tax revenues." Evaluate this view.</div>
+      <div class="ep-row"><div class="ep-label">Define</div><div class="ep-content">Top rate of income tax; tax revenues = rate × tax base. Laffer Curve: at 0% and 100%, revenue = 0; revenue-maximising rate (t*) exists between these extremes.</div></div>
+      <div class="ep-row"><div class="ep-label">Argument for</div><div class="ep-content">Laffer Curve logic: if rate is above t*, raising it further reduces labour supply, increases avoidance/evasion, and drives capital/talent flight → tax base shrinks more than rate rises → revenue falls. Supply-side economists (Reagan, Thatcher) used this to justify top rate cuts in 1980s.</div></div>
+      <div class="ep-row"><div class="ep-label">Counter 1</div><div class="ep-content">Diamond & Saez (2011): revenue-maximising top rate estimated at ~70% for USA. UK top rate currently 45% — well below t*. Raising top rate from 45% to 50% likely raises revenue. The claim assumes we are above t*, which is empirically unsupported.</div></div>
+      <div class="ep-row"><div class="ep-label">Counter 2</div><div class="ep-content">Elasticity of taxable income (ETI) is modest at low to moderate rates. Evidence from UK 50% rate (2010–2013): limited evidence of significant behavioural response; OBR estimated modest revenue gain.</div></div>
+      <div class="ep-row"><div class="ep-label">Limit of counter</div><div class="ep-content">Long-run behavioural responses larger than short-run: investment in tax avoidance structures takes time. HMRC data show increased dividend extraction before top rate cut in 2013 — timing effects distort short-run evidence.</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">"Always" is too strong. Whether raising the top rate reduces revenue depends on whether the current rate is above or below t*, the elasticity of taxable income, and the effectiveness of anti-avoidance legislation. At typical OECD top rates (40–50%), most evidence suggests raising the top rate increases revenue.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">Laffer (1974)</span><span class="econ-badge">Diamond & Saez (2011)</span><span class="econ-badge">OBR analysis</span></div>
+    </div>
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 3 of 10</div>
+      <div class="ep-q">Evaluate the impact of austerity on macroeconomic performance in the UK after the 2008 financial crisis.</div>
+      <div class="ep-row"><div class="ep-label">Define</div><div class="ep-content">Austerity: fiscal consolidation — spending cuts and/or tax rises to reduce the structural deficit and stabilise the debt-to-GDP ratio. Context: UK deficit reached ~10% of GDP in 2009–10.</div></div>
+      <div class="ep-row"><div class="ep-label">Argument for</div><div class="ep-content">Without consolidation, rising debt service costs crowd out public spending; potential sovereign debt crisis (cf. Greece 2010). Structural balance restores fiscal space for future downturns. Confidence channel: reducing debt uncertainty may support investment.</div></div>
+      <div class="ep-row"><div class="ep-label">Argument against 1</div><div class="ep-content">IMF (Blanchard & Leigh, 2013): multipliers during austerity were 1.5–2, not 0.5 as assumed. Each £1 of spending cuts reduced GDP by £1.50–2. Austerity was self-defeating: it reduced GDP, reducing tax revenues, partially offsetting deficit reduction.</div></div>
+      <div class="ep-row"><div class="ep-label">Argument against 2</div><div class="ep-content">UK productivity stagnated after 2008 — "productivity puzzle." Reduced public capital investment (schools, infrastructure) likely contributed to supply-side damage. Short-run austerity may have caused long-run hysteresis: unemployed workers lose skills, reducing potential output permanently.</div></div>
+      <div class="ep-row"><div class="ep-label">Argument against 3</div><div class="ep-content">Inequality impact: welfare cuts hit poorest hardest. IFS: real incomes of lowest quintile fell most sharply during 2010–2018 austerity period. Social costs of reduced public services (NHS waiting times, homelessness) not captured in GDP.</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">UK austerity reduced the deficit but at significant macroeconomic cost. At the ZLB with large multipliers, earlier fiscal consolidation was premature. A more gradual approach — consolidating once the economy had recovered (structural rather than cyclical deficit only) — would likely have delivered better outcomes for both growth and fiscal sustainability.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">Blanchard & Leigh (2013)</span><span class="econ-badge">IFS research</span><span class="econ-badge">OBR</span></div>
+    </div>
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 4 of 10</div>
+      <div class="ep-q">Evaluate the view that indirect taxes are preferable to direct taxes as a way of raising government revenue.</div>
+      <div class="ep-row"><div class="ep-label">Define</div><div class="ep-content">Direct tax: levied on income/profits directly (income tax, corporation tax). Indirect tax: levied on expenditure (VAT, excise duties). Evaluate on: efficiency, equity, revenue stability, avoidance potential.</div></div>
+      <div class="ep-row"><div class="ep-label">For indirect</div><div class="ep-content">Lower administration cost — collected at point of sale. Less scope for avoidance — harder to hide consumption than income. Pigouvian: excise duties on harmful goods (tobacco, alcohol, fuel) correct negative externalities, raising revenue while improving efficiency.</div></div>
+      <div class="ep-row"><div class="ep-label">Against indirect</div><div class="ep-content">Regressive: VAT takes higher % of income from poor than rich (all spend similar amounts but poor have lower incomes). Conflicts with equity objective. Violates Smith's canon of equity — those least able to pay bear proportionally higher burden.</div></div>
+      <div class="ep-row"><div class="ep-label">For direct</div><div class="ep-content">Progressive — rises with ability to pay. Better for redistribution and reducing inequality. Stable revenue base in booms when incomes are high. Individualised — can target those most able to contribute.</div></div>
+      <div class="ep-row"><div class="ep-label">Against direct</div><div class="ep-content">High avoidance scope — offshore accounts, corporate structures. May reduce work incentives at high rates (Laffer). Bracket creep: inflation pushes taxpayers into higher bands without real income increases.</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">No single tax type is uniformly superior. Optimal tax design uses both: progressive direct taxes for redistribution and stability, indirect taxes (with exemptions for essentials) for efficiency and externality correction. The optimal mix depends on the government's relative priorities for equity, efficiency, and revenue stability.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">Adam Smith (1776)</span><span class="econ-badge">Mirrlees Review (2011)</span><span class="econ-badge">Pigouvian taxation</span></div>
+    </div>
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 5 of 10</div>
+      <div class="ep-q">Evaluate the effectiveness of quantitative easing as a tool of macroeconomic policy.</div>
+      <div class="ep-row"><div class="ep-label">Define</div><div class="ep-content">QE: central bank creates money electronically and purchases assets (gilts, corporate bonds) → increases bank reserves, reduces long-term yields. Bank of England: £895bn by 2021.</div></div>
+      <div class="ep-row"><div class="ep-label">Transmission 1</div><div class="ep-content">Portfolio rebalancing: investors sell gilts to Bank → reinvest in equities/corporate bonds → asset prices ↑ → wealth effect → consumption ↑</div></div>
+      <div class="ep-row"><div class="ep-label">Transmission 2</div><div class="ep-content">Bank lending channel: ↑ reserves → ↑ lending capacity → credit availability ↑ → investment ↑. But: if banks use reserves to rebuild capital or hold as excess reserves, transmission fails.</div></div>
+      <div class="ep-row"><div class="ep-label">Limit 1</div><div class="ep-content">Inequality: QE raises asset prices → benefits wealthy asset owners disproportionately → worsens wealth inequality. Bank of England research (2012): QE benefited richest 5% most.</div></div>
+      <div class="ep-row"><div class="ep-label">Limit 2</div><div class="ep-content">Limited credit channel: if banks don't lend out reserves (instead hold as excess reserves), QE fails to stimulate real economy. Post-2009: credit growth remained weak despite massive QE.</div></div>
+      <div class="ep-row"><div class="ep-label">Limit 3</div><div class="ep-content">Exit problem: "taper tantrum" (2013) — when Fed signalled QE tapering, bond yields spiked globally. Unwinding QE without destabilising bond markets is very difficult (demonstrated 2022–24).</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">QE was effective at preventing financial collapse and reducing long-term yields, but its effects on real economy activity were modest. It is most effective when: financial markets are in crisis, conventional rates are at ZLB, and credit channels are partially functioning. Its distributional consequences and exit risks suggest it should be a last resort tool, not routine policy.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">Bank of England</span><span class="econ-badge">Bernanke (2009)</span><span class="econ-badge">Keynes liquidity trap</span></div>
+    </div>
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 6 of 10</div>
+      <div class="ep-q">Evaluate the policies a government might use to reduce its fiscal deficit.</div>
+      <div class="ep-row"><div class="ep-label">Define</div><div class="ep-content">Fiscal deficit: G - T > 0. National debt accumulates with each deficit. Reducing deficit: ↑T, ↓G, or ↑growth (which ↑T automatically). Distinguish structural from cyclical component.</div></div>
+      <div class="ep-row"><div class="ep-label">Policy 1: Cut spending</div><div class="ep-content">Reduces G directly. Structural impact if permanent. Risk: multiplier means GDP falls → automatic stabilisers partially offset savings. Self-defeating at ZLB with large multipliers (Blanchard & Leigh).</div></div>
+      <div class="ep-row"><div class="ep-label">Policy 2: Raise taxes</div><div class="ep-content">↑T raises revenue directly. Progressive taxes: high earner taxes most efficient if Laffer below t*. VAT rise: regressive but large revenue base. Risk: ↓AD → slower growth → smaller tax base.</div></div>
+      <div class="ep-row"><div class="ep-label">Policy 3: Grow out of it</div><div class="ep-content">Supply-side policies → ↑productivity → ↑GDP → automatic ↑tax revenue without rate changes. Long-run strategy but most sustainable — doesn't require painful tax rises or spending cuts. Requires effective supply-side reforms.</div></div>
+      <div class="ep-row"><div class="ep-label">Evaluate</div><div class="ep-content">Optimal approach: depends on cause (structural vs cyclical) and economic conditions. During recession: allow cyclical deficit; target structural. During growth: fiscal consolidation with less contractionary impact. Timing matters more than instrument choice.</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">The most effective deficit reduction strategy combines: modest structural consolidation during recovery (not during recession), supply-side policies to raise potential output, and progressive tax reform to broaden the base without high-rate distortions. Austerity during recession is counterproductive.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">IMF fiscal monitor</span><span class="econ-badge">OBR</span><span class="econ-badge">Blanchard & Leigh</span></div>
+    </div>
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 7 of 10</div>
+      <div class="ep-q">Evaluate the view that governments should always balance their budgets.</div>
+      <div class="ep-row"><div class="ep-label">Define</div><div class="ep-content">Balanced budget: G = T every year. Distinguish from cyclically balanced (balanced over the full cycle) and structural balance (balanced at full employment).</div></div>
+      <div class="ep-row"><div class="ep-label">Argument for</div><div class="ep-content">Prevents debt accumulation: r > g means debt-to-GDP ratio rises without primary surplus → eventual fiscal crisis. Maintains credibility with financial markets → lower borrowing costs. Inter-generational equity: current generation should not impose debt burden on future generations (Ricardo).</div></div>
+      <div class="ep-row"><div class="ep-label">Against 1</div><div class="ep-content">Keynesian automatic stabilisers require running deficits in recessions: balancing budget annually forces pro-cyclical policy — cuts spending precisely when multiplier is highest and damage is greatest. This deepens recessions (1930s austerity → Great Depression).</div></div>
+      <div class="ep-row"><div class="ep-label">Against 2</div><div class="ep-content">Capital expenditure argument (Golden Rule): borrowing for productive public investment (infrastructure, education) that raises future productivity is self-financing — raises future tax revenues to service the debt. Annual balance treats capital and current spending identically, discouraging productive investment.</div></div>
+      <div class="ep-row"><div class="ep-label">Against 3</div><div class="ep-content">Low interest rates and r < g: when borrowing costs fall below growth rates, debt-to-GDP ratio falls even with primary deficits. Blanchard (2019): in "low r" environment, government debt is less costly than traditionally assumed.</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">Strict annual balance is too rigid: forces pro-cyclical policy and prevents productive investment. More appropriate rules: structural balance (balance over the economic cycle), Golden Rule (borrow only for investment), and debt-to-GDP ceiling. Fiscal rules should be counter-cyclical, not pro-cyclical.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">Keynes</span><span class="econ-badge">Golden Rule</span><span class="econ-badge">Blanchard (2019)</span></div>
+    </div>
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 8 of 10</div>
+      <div class="ep-q">Evaluate the effectiveness of government intervention in regulating TNC tax avoidance.</div>
+      <div class="ep-row"><div class="ep-label">Define</div><div class="ep-content">TNC tax avoidance: legal strategies to minimise tax (transfer pricing, debt shifting, treaty shopping). Costs: OECD estimates $100–240bn/year global revenue loss (4–10% of corporate tax). Regulation: BEPS, global minimum 15%, CbCR.</div></div>
+      <div class="ep-row"><div class="ep-label">Case for BEPS</div><div class="ep-content">Country-by-country reporting increases transparency. Arm's length pricing rules reduce transfer pricing manipulation. Hybrid mismatch rules eliminate "stateless income" structures. 137 countries signed BEPS framework — broad participation.</div></div>
+      <div class="ep-row"><div class="ep-label">Limit 1</div><div class="ep-content">Transfer pricing of intangibles (patents, algorithms, brands): no objective market price → TNCs retain flexibility to shift profits. Regulatory arbitrage: TNCs develop new structures faster than BEPS rules are updated.</div></div>
+      <div class="ep-row"><div class="ep-label">Limit 2</div><div class="ep-content">15% global minimum: stops race to bottom but floor is low. Countries below 15% (Cayman, BVI) not OECD members → non-participants continue offering zero-tax environments. Large TNCs below revenue threshold excluded.</div></div>
+      <div class="ep-row"><div class="ep-label">Limit 3</div><div class="ep-content">Enforcement asymmetry: developing countries lack technical capacity to audit complex TNC structures. Proportionally bear largest burden of revenue loss (corporate tax is larger share of their revenue) but have least enforcement capacity.</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">BEPS and the global minimum rate represent genuine progress but remain insufficient. More ambitious reform (formulary apportionment — taxing profits where sales/employees are located rather than where profits are booked) would be more effective but requires deeper sovereignty concessions than most governments accept.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">OECD BEPS (2015)</span><span class="econ-badge">Pillar Two (2021)</span><span class="econ-badge">Zucman (2015)</span></div>
+    </div>
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 9 of 10</div>
+      <div class="ep-q">Evaluate the role of fiscal policy in promoting economic growth in a developing economy.</div>
+      <div class="ep-row"><div class="ep-label">Define</div><div class="ep-content">Fiscal policy: G and T decisions. Growth: sustainable increase in real GDP per capita. Developing economy context: low initial human capital, infrastructure deficit, weak institutions.</div></div>
+      <div class="ep-row"><div class="ep-label">Channel 1: Public investment</div><div class="ep-content">Capital expenditure in roads, ports, power, broadband → reduces transactions costs → enables trade and specialisation → ↑TFP. Infrastructure bottlenecks are key constraint in many LDCs. WB: 1% ↑ infrastructure investment → ~1.5% ↑ GDP long-run.</div></div>
+      <div class="ep-row"><div class="ep-label">Channel 2: Human capital</div><div class="ep-content">Public education and health spending → ↑productivity → ↑long-run growth. Conditional on quality of spending: teacher quality, access for girls (closing gender gap in education raises growth disproportionately — World Bank).</div></div>
+      <div class="ep-row"><div class="ep-label">Channel 3: Demand management</div><div class="ep-content">Less relevant in LDCs with undeveloped financial markets and limited fiscal space. Multiplier smaller in open, low-income economies with high import propensity and limited automatic stabilisers.</div></div>
+      <div class="ep-row"><div class="ep-label">Constraints</div><div class="ep-content">Fiscal space: narrow tax base, high informality, weak enforcement → low tax revenue → limited spending capacity. Tax revenue ≈ 15% of GDP in many LDCs vs 35–45% in OECD. Must borrow internationally → external debt risk.</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">Fiscal policy can promote growth through infrastructure and human capital investment, but is constrained by limited fiscal space. Most critical reform: broaden the tax base (reduce informality, improve enforcement) to finance public investment without unsustainable debt. The composition of spending matters more than its level.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">World Bank</span><span class="econ-badge">Harrod-Domar</span><span class="econ-badge">IMF fiscal monitor</span></div>
+    </div>
+
+    <div class="essay-plan">
+      <div class="ep-title">Essay Plan 10 of 10</div>
+      <div class="ep-q">Evaluate the view that rising national debt is always harmful to an economy.</div>
+      <div class="ep-row"><div class="ep-label">Define</div><div class="ep-content">National debt: accumulated stock of government borrowing. Debt-to-GDP ratio: the meaningful measure of sustainability. UK: rose from ~40% to &gt;100% of GDP post-2008.</div></div>
+      <div class="ep-row"><div class="ep-label">Harmful argument 1</div><div class="ep-content">Rising debt service costs crowd out public spending. Higher real interest rates (risk premium) when debt is high → investment ↓ → growth ↓. Reinhart & Rogoff (2010) controversially claimed debt &gt;90% GDP associated with lower growth (though later disputed due to data errors).</div></div>
+      <div class="ep-row"><div class="ep-label">Harmful argument 2</div><div class="ep-content">Intergenerational burden: future taxpayers must service today's debt. Ricardian households anticipate future tax rises, increasing savings today and reducing current AD.</div></div>
+      <div class="ep-row"><div class="ep-label">Counter 1</div><div class="ep-content">Blanchard (2019): when r &lt; g (interest rate below growth rate), debt-to-GDP ratio falls automatically — no fiscal tightening needed. In low interest rate era, debt is cheap and sustainable even at high levels.</div></div>
+      <div class="ep-row"><div class="ep-label">Counter 2</div><div class="ep-content">Composition matters: if debt finances productive public investment (infrastructure, education), future GDP and tax revenues rise to service it — self-financing. Golden Rule rationale.</div></div>
+      <div class="ep-row"><div class="ep-label">Counter 3</div><div class="ep-content">Debt owned domestically: if debt is held by domestic investors, interest payments are a transfer within the economy (redistribution from taxpayers to bondholders) not a net burden on national income. Mostly applies to Japan (95%+ domestically held debt at &gt;200% GDP).</div></div>
+      <div class="ep-row"><div class="ep-label">Conclude</div><div class="ep-content">"Always harmful" is too strong. Rising debt from productive investment in low-rate environments may be sustainable and growth-enhancing. Rising debt from current consumption (transfer payments, current expenditure) without corresponding productivity gains is more harmful. The key variable is r vs g and the composition of debt-financed spending.</div></div>
+      <div style="margin-top:.65rem;"><span class="econ-badge">Blanchard (2019)</span><span class="econ-badge">Reinhart & Rogoff (2010)</span><span class="econ-badge">Golden Rule</span></div>
+    </div>
+
+  </div>
+</div>
+
+</main>
+</div>
+<script>
+const PW='fire';
+document.getElementById('pwInput').addEventListener('keydown',e=>{if(e.key==='Enter')checkPw();});
+function checkPw(){
+  if(document.getElementById('pwInput').value===PW){document.getElementById('gate').style.display='none';document.getElementById('content').style.display='block';}
+  else{document.getElementById('pwError').style.display='block';document.getElementById('pwInput').value='';setTimeout(()=>document.getElementById('pwError').style.display='none',2500);}
+}
+function toggleSection(h){const b=h.nextElementSibling,i=h.querySelector('.toggle-icon'),o=b.style.display!=='none';b.style.display=o?'none':'block';i.style.transform=o?'':'rotate(180deg)';}
+function toggleQ(h){h.nextElementSibling.classList.toggle('open');}
+document.querySelectorAll('.section-body').forEach(b=>b.style.display='block');
+document.querySelectorAll('.toggle-icon').forEach(i=>i.style.transform='rotate(180deg)');
+</script>
+</body>
+</html>
